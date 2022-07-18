@@ -2,7 +2,7 @@
  
 class Empleado{
  private $nombre;
- private$CodigodeEmpleado;
+ private $CodigodeEmpleado;
  private $sueldo;
  private $Puesto;
  private static $bono;
