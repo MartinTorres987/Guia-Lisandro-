@@ -1,19 +1,18 @@
 <?php
     class Ahorro{
-        protected static $totalahorro;
+        protected $totalahorro;
         protected $cantidad;
 
         //Metodos
 
         public function __construct(){
             $this->cantidad = 0;
-            self::$totalahorro = 0;
+            $this->totalahorro = 0;
         }
-
 
         //Getter
         public function getTotal(){
-            return self::$cantidad;
+            return $this->totalahorro = 0;;
         }
         public function getCantidad(){
             return $this->cantidad;
@@ -24,14 +23,14 @@
             $this->cantidad = $cantidad;
         }
         public function setTotal($totalahorro){
-            self::$totalahorro = $totalahorro;
+            $this->totalahorro = $totalahorro;
         }
 
         public function Retirar($retirar)
         {
-            if ($retirar <= self::$totalahorro) {
+            if ($retirar <= $this->totalahorro) {
                 $this->cantidad=$retirar;
-                return self::$totalahorro = Ahorro::$totalahorro-$retirar;
+                return $this->totalahorro = $this->totalahorro-$retirar;
             }else{
                 echo "<h2>Ups, al parecer no puedes retirar esa cantidad</h2><br>";
             }
@@ -41,7 +40,7 @@
             
             if ($cantidad > 0) {
                 $this->cantidad = $cantidad;
-                return self::$totalahorro = $cantidad + Ahorro::$totalahorro;
+                return $this->totalahorro = $cantidad + $this->totalahorro;
             }else{
                 echo "<h2>Ups, al parecer no puedes retirar esa cantidad</h2><br>";
             }
@@ -49,7 +48,7 @@
 
         public function getConsultar()
         {
-            return self::$totalahorro;
+            return $this->totalahorro;
         }
 
         
